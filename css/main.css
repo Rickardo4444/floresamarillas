@@ -26,7 +26,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    
 }
 
 .heart {
@@ -149,8 +148,6 @@ body {
       margin-bottom: 35%;
       letter-spacing: 3px;
       transform: scale(1.0);
-      /*CAMBIOSSSS*/
-      
 }
 
 }
@@ -1692,7 +1689,6 @@ h1 {
 }
 
 /* Agregar más estilos según sea necesario */
-
 /* ===== Estilos responsivos ===== */
 @media (max-width: 768px) {
   body {
