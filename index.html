@@ -57,6 +57,27 @@
         margin-bottom: 15px;
       }
     }
+    /*ESPACIO EN BLANCO*/
+    /* Quita espacios en blanco y scroll fantasma */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* bloquea scroll lateral */
+}
+
+/* Si quieres también evitar scroll vertical extra */
+body {
+  overflow-y: auto; /* permite scroll solo si realmente es necesario */
+}
+
+/* Evitar que cualquier contenedor sobrepase el ancho */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
   </style>
 </head>
 <body class="container">
