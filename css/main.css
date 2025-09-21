@@ -26,12 +26,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 100%;
-    overflow: hidden;
+    
 }
 
 .heart {
@@ -1744,4 +1739,5 @@ h1 {
     transform: scale(0.6);
   }
 }
+
 
