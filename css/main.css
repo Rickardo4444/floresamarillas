@@ -26,6 +26,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .heart {
@@ -148,6 +154,13 @@ body {
       margin-bottom: 35%;
       letter-spacing: 3px;
       transform: scale(1.0);
+      /*CAMBIOSSSS*/
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 }
@@ -1690,168 +1703,49 @@ h1 {
 
 /* Agregar más estilos según sea necesario */
 
-/* Reset */
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --dark-color: #000;
-  --accent-color: #fddd25;
-  --heart-color: red;
-}
-
-/* Fondo principal */
-body {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: var(--dark-color);
-  overflow: hidden;
-  perspective: 1000px;
-  font-family: "Arial Narrow", Arial, sans-serif;
-}
-
-/*--------------------------------------------*/
-/* CORAZONES */
-.hearts {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.heart {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: var(--heart-color);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  opacity: 0;
-  animation: pop 1s forwards;
-}
-
-@keyframes pop {
-  0% {
-    transform: translateY(0) scale(0);
-    opacity: 1;
+/* ===== Estilos responsivos ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 14px;
   }
-  50% {
-    transform: translateY(-30px) scale(1);
+
+  #startMessage {
+    font-size: 1.2rem;
+    margin: 15px;
   }
-  100% {
-    transform: translateY(-100px) scale(0);
-    opacity: 0;
+
+  h1, h2, .titulo {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
   }
-}
 
-/*--------------------------------------------*/
-/* LETRAS */
-#lyrics {
-  font-size: 28px;
-  color: white;
-  position: absolute;
-  bottom: 20%;
-  z-index: 1;
-  font-weight: bold;
-  letter-spacing: 4px;
-  text-align: center;
-  width: 90%;
-}
-
-.titulo {
-  top: 10%;
-  font-size: 32px;
-  color: yellow;
-  position: absolute;
-  font-weight: bold;
-  letter-spacing: 8px;
-  opacity: 0;
-  animation: fadeIn 3s ease-in-out forwards;
-  text-align: center;
-  width: 100%;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Responsividad */
-@media only screen and (max-width: 600px) {
-  #lyrics {
-    font-size: 16px;
-    bottom: 35%;
-    letter-spacing: 2px;
-  }
-  .titulo {
-    font-size: 20px;
-    letter-spacing: 4px;
-    top: 5%;
-  }
-}
-
-/*--------------------------------------------*/
-/* FONDO NOCHE */
-.night {
-  z-index: -1;
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)),
-              radial-gradient(ellipse at bottom, var(--dark-color), rgba(145,233,255,0.2)),
-              linear-gradient(90deg, cyan, #f0f0f0);
-  filter: blur(0.1vmin);
-}
-
-/*--------------------------------------------*/
-/* FLORES */
-.flowers {
-  position: relative;
-  transform: scale(0.9);
-}
-
-@media only screen and (max-width: 600px) {
   .flowers {
-    transform: scale(1);
-    margin-bottom: 25%;
+    transform: scale(0.7);
+    margin: 0 auto;
+  }
+
+  .hearts {
+    transform: scale(0.8);
   }
 }
 
-/* Flor base */
-.flower {
-  position: absolute;
-  bottom: 10vmin;
-  transform-origin: bottom center;
-  z-index: 10;
-  --fl-speed: 0.8s;
-}
+@media (max-width: 480px) {
+  #startMessage {
+    font-size: 1rem;
+  }
 
-/* Ejemplo flor */
-.flower__leaf {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 8vmin;
-  height: 11vmin;
-  border-radius: 51% 49% 47% 53% / 44% 45% 55% 69%;
-  background-color: var(--accent-color);
-  transform-origin: bottom center;
-  opacity: 0.9;
-  box-shadow: inset 0 0 2vmin rgba(255,255,255,0.5);
-}
+  h1, h2, .titulo {
+    font-size: 1rem;
+    padding: 0 5px;
+  }
 
-/*--------------------------------------------*/
-/* PASTO SIMPLIFICADO */
-.flower__grass {
-  position: absolute;
-  bottom: 0;
-  width: 2px;
-  height: 20vmin;
-  background: linear-gradient(to top, transparent, #159faa);
+  .flowers {
+    transform: scale(0.5);
+  }
+
+  .hearts {
+    transform: scale(0.6);
+  }
 }
