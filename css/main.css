@@ -155,12 +155,7 @@ body {
       letter-spacing: 3px;
       transform: scale(1.0);
       /*CAMBIOSSSS*/
-      display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 100%;
-  overflow: hidden;
+      
 }
 
 }
@@ -1749,3 +1744,4 @@ h1 {
     transform: scale(0.6);
   }
 }
+
