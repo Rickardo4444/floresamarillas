@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="icon" href="img/flowers.png" type="image/x-icon" />
-  <title>DE MI PARA TU</title>
-  <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="img/flowers.png" type="image/x-icon" />
+    <title>DE MI PARA TU</title>
+    <style>
     /* Ocultamos los textos inicialmente */
     h1, h2, .titulo {
       display: none;
@@ -79,23 +79,22 @@ body {
 }
 
   </style>
-</head>
-<body class="container">
-  <audio id="miAudio" src="sound/Floricienta-Flores Amarillas.mp3"></audio>
+  </head>
+  <body class="container">
+    <audio id="miAudio" src="sound/Floricienta-Flores Amarillas.mp3"></audio>
 
-  <!-- Mensaje para iniciar -->
-  <div id="startMessage" onclick="iniciar()">🌸 Dale click aquí para comenzar 🌸</div>
+    <!-- Mensaje para iniciar -->
+    <div id="startMessage" onclick="iniciar()">🌸 Dale click aquí para comenzar 🌸</div>
 
-  <!-- Textos que se mostrarán después -->
-  <h1>Para mi bb ok no, pero si quieres si, y si no quieres no :3</h1>
-  <h1 class="titulo">
-    Ella sabia que el sabia que algun dia pasaria Que vendria a buscarla <br /><br />
-    Con sus flores amarishasssss :3
-  </h1>
+    <!-- Textos que se mostrarán después -->
+    <h1>Para mi bb ok no, pero si quieres si, y si no quieres no :3</h1>
+    <h1 class="titulo">
+      Ella sabia que el sabia que algun dia pasaria Que vendria a buscarla <br /><br />
+      Con sus flores amarishasssss :3
+    </h1>
 
-  <!-- Contenedor de flores y césped -->
-  <div class="night"></div>
-  <div class="flowers">
+    <div class="night"></div>
+    <div class="flowers">
       <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
           <div class="flower__leaf flower__leaf--1"></div>
@@ -404,23 +403,24 @@ body {
         </div>
       </div>
     </div>
+    <div class="hearts"></div>
 
-  <div class="hearts"></div>
+    <script>
+      function iniciar() {
+        // Reproducir audio
+        const audio = document.getElementById("miAudio");
+        audio.play();
 
-  <script>
-    function iniciar() {
-      // Reproducir audio
-      const audio = document.getElementById("miAudio");
-      audio.play();
-      // Mostrar los textos
-      document.querySelectorAll("h1, h2, .titulo").forEach(el => {
-        el.style.display = "block";
-      });
-      // Ocultar el mensaje de inicio
-      document.getElementById("startMessage").style.display = "none";
-    }
-  </script>
-  <script src="anim.js"></script>
-  <script src="main.js"></script>
-</body>
+        // Mostrar los textos
+        document.querySelectorAll("h1, h2, .titulo").forEach(el => {
+          el.style.display = "block";
+        });
+
+        // Ocultar el mensaje de inicio
+        document.getElementById("startMessage").style.display = "none";
+      }
+    </script>
+    <script src="anim.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
