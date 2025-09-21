@@ -1689,3 +1689,50 @@ h1 {
 }
 
 /* Agregar más estilos según sea necesario */
+
+/* ===== Estilos responsivos ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  #startMessage {
+    font-size: 1.2rem;
+    margin: 15px;
+  }
+
+  h1, h2, .titulo {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .flowers {
+    transform: scale(0.7);
+    margin: 0 auto;
+  }
+
+  .hearts {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  #startMessage {
+    font-size: 1rem;
+  }
+
+  h1, h2, .titulo {
+    font-size: 1rem;
+    padding: 0 5px;
+  }
+
+  .flowers {
+    transform: scale(0.5);
+  }
+
+  .hearts {
+    transform: scale(0.6);
+  }
+}
